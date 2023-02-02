@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+         prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18"
+         xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.umontpellier.vues.ConfigurationController">
+    <tabs>
+        <Tab text="Configuration">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <TextField id="questionField" fx:id="questionLabel" layoutX="174.0" layoutY="46.0"
+                                   prefHeight="26.0" prefWidth="280.0" promptText="Aimez-vous les hamsters ?"/>
+                        <Label layoutX="48.0" layoutY="51.0" text="Intitulé de la question:"/>
+                        <Label layoutX="50.0" layoutY="201.0" text="Date de fin:"/>
+                        <DatePicker fx:id="dateFin" layoutX="120.0" layoutY="197.0"
+                                    promptText="Chosissez une date de fin"/>
+                        <Button fx:id="startButton" layoutX="50.0" layoutY="284.0" mnemonicParsing="false"
+                                onAction="#startVote" text="Démarrer"/>
+                        <TextField id="hourField" fx:id="hourField" layoutX="86.0" layoutY="234.0" prefHeight="26.0"
+                                   prefWidth="176.0" promptText="HH:MM:SS"/>
+                        <Label layoutX="48.0" layoutY="239.0" text="Heure:"/>
+                        <TextField id="choixUnField" fx:id="choixUnField" layoutX="131.0" layoutY="81.0"
+                                   prefHeight="26.0" prefWidth="280.0" promptText="Oui"/>
+                        <Label layoutX="48.0" layoutY="86.0" text="Premier choix:"/>
+                        <TextField id="choixDeuxField" fx:id="choixDeuxField" layoutX="131.0" layoutY="117.0"
+                                   prefHeight="26.0" prefWidth="280.0" promptText="Non"/>
+                        <Label layoutX="48.0" layoutY="122.0" text="Second choix:"/>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Utilisateurs">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <StackPane layoutX="23.0" layoutY="20.0"/>
+                        <TextField id="loginText" fx:id="loginText" layoutX="133.0" layoutY="56.0" prefHeight="26.0"
+                                   prefWidth="222.0" promptText="john.d"/>
+                        <Label layoutX="68.0" layoutY="60.0" text="Identifiant:"/>
+                        <TextField id="password" fx:id="passwordText" layoutX="150.0" layoutY="94.0" prefHeight="26.0"
+                                   prefWidth="204.0" promptText="passwordText"/>
+                        <Label layoutX="68.0" layoutY="135.0" text="À voté:"/>
+                        <Button id="addButton" fx:id="addButton" layoutX="68.0" layoutY="207.0" mnemonicParsing="false"
+                                onAction="#ajouterUtilisateur" text="Ajouter"/>
+                        <Button id="editButton" fx:id="editButton" layoutX="142.0" layoutY="207.0"
+                                mnemonicParsing="false" onAction="#modifierUtilisateur" text="Modifier"/>
+                        <Button id="supprButton" fx:id="supprButton" layoutX="226.0" layoutY="207.0"
+                                mnemonicParsing="false" onAction="#supprimerUtilisateur" text="Supprimer"/>
+                        <TextField id="aVote" fx:id="aVote" layoutX="113.0" layoutY="131.0" promptText="0/1"/>
+                        <TextField id="mailText" fx:id="mailText" layoutX="102.0" layoutY="169.0" prefHeight="26.0"
+                                   prefWidth="198.0" promptText="john.doe@etu.umontpellier.fr"/>
+                        <Label layoutX="68.0" layoutY="173.0" text="Mail:"/>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab fx:id="userTab" text="Modifier les utilisateurs">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <TextField fx:id="search" layoutX="220.0" layoutY="42.0" promptText="Rechercher" onKeyTyped="#search"/>
+                        <ListView fx:id="listUsers" layoutX="126.0" layoutY="84.0" prefHeight="200.0"
+                                  prefWidth="347.0"/>
+                        <Button fx:id="refresh" layoutX="263.0" layoutY="314.0" mnemonicParsing="false" text="Actualiser"
+                                onAction="#refresh"/>
+                        <Button fx:id="delete" layoutX="463.0" layoutY="314.0" mnemonicParsing="false" text="Supprimer"
+                                onAction="#delete"/>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+    </tabs>
+    <stylesheets>
+        <URL value="@../css/style.css"/>
+    </stylesheets>
+</TabPane>

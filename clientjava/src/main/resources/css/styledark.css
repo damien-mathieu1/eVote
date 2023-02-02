@@ -1,0 +1,169 @@
+/*
+
+Couleurs de base :
+
+main-color: rgb(0, 165, 81);
+main-color-hover: rgb(0, 84, 40);
+main-color-fill: rgb(255, 255, 255);
+main-color-error: rgb(255, 55, 95);
+
+*/
+
+.root {
+    main-color: rgb(0, 100, 23);
+    main-color-hover: rgb(0, 165, 81);
+    main-color-fill: rgb(30, 30, 30);
+    main-color-error: rgb(255, 55, 95);
+    textfieldcolor: rgb(50, 50, 50);
+    textlabelcolor: rgb(127, 126, 131);
+    colorperdu: rgb(80, 78, 78);
+    colortexte: rgb(255, 255, 255);
+
+    -fx-background-color: main-color-fill;
+}
+
+#texte{
+    -fx-text-fill: colortexte;
+    -fx-fill: colortexte;
+}
+
+#labelTexte{
+    -fx-text-fill: textlabelcolor;
+    -fx-fill: textlabelcolor;
+}
+
+.combo-box .cell {
+    -fx-text-fill: colortexte;
+}
+
+.combo-box-popup .cell{
+    -fx-background-color: main-color-fill;
+    -fx-border-color: textfieldcolor;
+}
+
+.combo-box .cell:hover {
+    -fx-background-color: main-color-hover;
+    -fx-text-fill: colortexte;
+}
+
+.combo-box .cell:selected {
+    -fx-text-fill: colortexte;
+}
+
+
+.text-field, .password-field, .combo-box {
+    -fx-background-color: textfieldcolor;
+    -fx-border-radius: 70;
+    -fx-background-radius: 70;
+    -fx-text-fill: colortexte;
+    -fx-prompt-text-fill: colortexte;
+}
+
+.button {
+    -fx-background-color: main-color;
+    -fx-border-radius: 80;
+    -fx-background-radius: 80;
+    -fx-text-fill: main-color-fill;
+    -fx-cursor: hand;
+}
+
+.toggle-button{
+    -fx-background-color: textfieldcolor;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-text-fill: #bebebe;
+}
+
+.toggle-button:hover, .toggle-button:selected{
+    -fx-background-color: #C2C2C2;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-text-fill: black;
+    -fx-cursor: hand;
+}
+
+#boutonTexte {
+    -fx-background-color: main-color-fill;
+    -fx-text-fill: main-color;
+    -fx-text-underline: true;
+}
+
+#boutonTexte:hover {
+    -fx-background-color: main-color-fill;
+    -fx-text-fill: main-color-hover;
+    -fx-text-underline: true;
+    -fx-text-italic: true;
+}
+
+#messageErreur {
+    -fx-fill: main-color-error;
+}
+
+#BigText {
+    -fx-fill: main-color;
+    -fx-font-family: roboto;
+}
+
+.button:hover {
+    -fx-background-color: main-color-hover;
+    -fx-border-radius: 80;
+    -fx-background-radius: 80;
+    -fx-text-fill: main-color-fill;
+}
+
+#retourBouton:hover {
+    -fx-scale-y: 1.05;
+    -fx-scale-x: 1.05;
+}
+
+#boutonTexte{
+    -fx-background-color: main-color-fill;
+    -fx-text-fill: main-color;
+    -fx-text-underline: true;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: textfieldcolor;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: colortexte;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: main-color;
+    -fx-text-fill: main-color-fill;
+    -fx-background-insets: 0 0 0 0;
+}
+
+.table-view:focused {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.table-row-cell{
+    -fx-background-color: -fx-table-cell-border-color, textlabelcolor;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-view .table-cell{
+    -fx-text-fill: colortexte;
+}
+
+#progressGagne {
+    -fx-fill: main-color;
+}
+
+#progressPerdu {
+    -fx-fill: colorperdu;
+}
+
+#progressBackground {
+    -fx-fill: textfieldcolor;
+}

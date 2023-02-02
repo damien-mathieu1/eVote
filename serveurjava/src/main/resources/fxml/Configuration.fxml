@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<TabPane fx:id="tabPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+         fx:controller="fr.umontpellier.controller.ConfigurationController">
+    <tabs>
+        <Tab fx:id="configurationVote" closable="false" text="Créer un vote" >
+            <fx:include source="ConfigurationVote.fxml"/>
+        </Tab>
+        <Tab fx:id="votesEnCours" closable="false" text="Votes en cours">
+            <fx:include source="VotesEnCours.fxml"/>
+        </Tab>
+        <Tab fx:id="configurationUtilisateur" closable="false" text="Utilisateurs">
+            <fx:include source="ConfigurationUtilisateur.fxml"/>
+        </Tab>
+    </tabs>
+</TabPane>

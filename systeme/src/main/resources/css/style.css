@@ -1,0 +1,55 @@
+/*
+
+Couleurs de base :
+
+main-color: rgb(0, 165, 81);
+main-color-hover: rgb(0, 84, 40);
+main-color-fill: rgb(255, 255, 255);
+main-color-error: rgb(255, 55, 95);
+
+*/
+
+.root {
+    main-color: rgb(0, 165, 81);
+    main-color-hover: rgb(0, 100, 23);
+    main-color-fill: rgb(255, 255, 255);
+    main-color-error: rgb(255, 55, 95);
+}
+
+.button {
+    -fx-background-color: main-color;
+    -fx-border-radius: 80;
+    -fx-background-radius: 80;
+    -fx-text-fill: main-color-fill;
+}
+
+#boutonTexte {
+    -fx-background-color: main-color-fill;
+    -fx-text-fill: main-color;
+    -fx-text-underline: true;
+}
+
+#boutonTexte:hover {
+    -fx-background-color: main-color-fill;
+    -fx-text-fill: main-color-hover;
+    -fx-text-underline: true;
+    -fx-text-italic: true;
+}
+
+#messageErreur {
+    -fx-fill: main-color-error;
+}
+
+#BigText {
+    -fx-fill: main-color;
+    -fx-font-family: roboto;
+}
+
+.button:hover {
+    -fx-background-color: main-color-hover;
+    -fx-border-radius: 80;
+    -fx-background-radius: 80;
+    -fx-text-fill: main-color-fill;
+    -fx-scale-x: 1.01;
+    -fx-scale-y: 1.01;
+}

@@ -1,0 +1,50 @@
+/*
+Couleurs de base :
+
+main-color: rgb(0, 165, 81);
+main-color-hover: rgb(0, 84, 40);
+main-color-fill: rgb(255, 255, 255);
+main-color-error: rgb(255, 55, 95);
+*/
+
+
+
+#configurationUtilisateur{
+    -fx-background-color: white;
+}
+
+.text-field{
+    -fx-background-color: #F4F4F4;
+    -fx-border-radius: 70;
+    -fx-background-radius: 70;
+}
+
+.button{
+    -fx-background-color:#00A551;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-text-fill: white;
+}
+
+.button:hover{
+    -fx-background-color: #038241;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+.toggle-button{
+    -fx-background-color: #F4F4F4;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
+
+.toggle-button:hover, .toggle-button:selected{
+    -fx-background-color: #C2C2C2;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+}
+
+
